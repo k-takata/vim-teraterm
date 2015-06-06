@@ -17,13 +17,17 @@ License: VIM License
 
 1. Add this directory to your 'runtimepath':
 
+	```vim
 	:set runtimepath+=/path/to/vim-teraterm/
+	```
 
 2. Create a file to detect the 'teraterm' file type.
 
    Create a file that contains the following line:
 
+	```vim
 	au BufRead,BufNewFile *.ttl	set filetype=teraterm
+	```
 
    Save this file as `~/.vim/ftdetect/teraterm.vim`.
 
