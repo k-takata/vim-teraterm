@@ -5,15 +5,15 @@ This includes an indent file and a syntax file.
 
 License: VIM License
 
-# Supported version
+## Supported version
 
-* [Tera Term](http://ttssh2.osdn.jp/index.html.en): 4.86
+* [Tera Term](http://ttssh2.osdn.jp/index.html.en) 4.86
 
-# Requirements
+## Requirements
 
 * Vim 7.4 or later.
 
-# Usage
+## Usage
 
 1. Add this directory to your 'runtimepath':
 
