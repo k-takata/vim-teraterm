@@ -3,7 +3,7 @@
 "		Based on Tera Term Version 4.86
 " Maintainer:	Ken Takata
 " URL:		https://github.com/k-takata/vim-teraterm
-" Last Change:	2015 Jun 4
+" Last Change:	2015 Jun 24
 " Filenames:	*.ttl
 " License:	VIM License
 
@@ -17,7 +17,9 @@ set cpo&vim
 syn case ignore
 
 syn region ttlComment	start=";" end="$" contains=@Spell
-syn region ttlComment	start="/\*" end="\*/" contains=@Spell nextgroup=ttlStatement
+syn region ttlComment	start="/\*" end="\*/" contains=@Spell
+syn region ttlFirstComment	start="/\*" end="\*/" contained contains=@Spell
+			\ nextgroup=ttlStatement,ttlFirstComment
 
 syn match ttlCharacter	"#\%(\d\+\|\$\x\+\)\>"
 syn match ttlNumber	"\%(\<\d\+\|\$\x\+\)\>"
@@ -37,7 +39,7 @@ syn keyword ttlVar	inputstr matchstr paramcnt result timeout mtimeout
 syn match ttlLine nextgroup=ttlStatement "^"
 syn match ttlStatement contained "\s*"
 			\ nextgroup=ttlIf,ttlElseIf,ttlConditional,ttlRepeat,
-			\ ttlComment,ttlLabel,@ttlCommand
+			\ ttlFirstComment,ttlComment,ttlLabel,@ttlCommand
 
 syn cluster ttlCommand contains=ttlControlCommand,ttlCommunicationCommand,
 			\ ttlStringCommand,ttlFileCommand,ttlPasswordCommand,
@@ -112,6 +114,7 @@ syn keyword ttlMiscCommand contained
 hi def link ttlCharacter Character
 hi def link ttlNumber Number
 hi def link ttlComment Comment
+hi def link ttlFirstComment Comment
 hi def link ttlString String
 hi def link ttlLabel Label
 hi def link ttlIf Conditional
