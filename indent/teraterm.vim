@@ -3,7 +3,7 @@
 "		Based on Tera Term Version 4.86
 " Maintainer:	Ken Takata
 " URL:		https://github.com/k-takata/vim-teraterm
-" Last Change:	2015 Jun 4
+" Last Change:	2015 Oct 31
 " Filenames:	*.ttl
 " License:	VIM License
 
@@ -48,7 +48,7 @@ function! GetTeraTermIndent(lnum)
 
   let l:ind = l:previ
 
-  if l:prevl =~ '^\s*if\>.*\<then\s*$'
+  if l:prevl =~ '^\s*if\>.*\<then\>'
     " previous line opened a block
     let l:ind += s:sw()
   endif
