@@ -22,6 +22,7 @@ License: VIM License
 	```
 
 2. Create a file to detect the 'teraterm' file type.
+   (This is not needed if you use Vim 7.4.794 or later.)
 
    Create a file that contains the following line:
 
