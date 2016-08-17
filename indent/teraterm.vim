@@ -25,9 +25,7 @@ endif
 " The shiftwidth() function is relatively new.
 " Don't require it to exist.
 if exists('*shiftwidth')
-  function s:sw() abort
-    return shiftwidth()
-  endfunction
+  let s:sw = function('shiftwidth')
 else
   function s:sw() abort
     return &shiftwidth
