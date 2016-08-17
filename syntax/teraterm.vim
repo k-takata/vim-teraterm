@@ -33,7 +33,7 @@ syn keyword ttlOperator	and or xor not
 
 syn match ttlVar	"\<groupmatchstr\d\>"
 syn match ttlVar	"\<param\d\>"
-syn keyword ttlVar	inputstr matchstr paramcnt result timeout mtimeout
+syn keyword ttlVar	inputstr matchstr paramcnt params result timeout mtimeout
 
 
 syn match ttlLine nextgroup=ttlStatement "^"
