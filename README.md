@@ -7,7 +7,7 @@ License: VIM License
 
 ## Supported version
 
-* [Tera Term](http://ttssh2.osdn.jp/index.html.en) 4.92
+* [Tera Term](http://ttssh2.osdn.jp/index.html.en) 4.100
 
 ## Requirements
 
