@@ -18,6 +18,8 @@ setlocal indentexpr=GetTeraTermIndent(v:lnum)
 setlocal indentkeys=!^F,o,O,e
 setlocal indentkeys+==elseif,=endif,=loop,=next,=enduntil,=endwhile
 
+let b:undo_indent = "setl ai< inde< indk< si<"
+
 if exists("*GetTeraTermIndent")
   finish
 endif
